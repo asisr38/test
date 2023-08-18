@@ -19,6 +19,9 @@ public class StudentService {
 
     public List<Student> getStudents() {
         return studentRepository.findAll();
-//        return List.of(new Student(1L, "Alex", "Alex.stone@email.com", LocalDate.of(1987, Month.AUGUST, 23), 24));
+    }
+
+    public  void addNewStudent(Student student){
+        studentRepository.save(student);
     }
 }
